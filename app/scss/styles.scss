@@ -1,0 +1,31 @@
+@import "zmienne";  //najpierw importy, później zdefiniowane np mixiny 
+
+@mixin menu-nawigacyjne {
+    color: aqua;
+    font-size: 22px;
+}
+
+
+body {
+    color: $base-color;
+    background-color: $bg-color;
+}
+
+nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+        
+        li {
+            display: inline-block;
+            
+            a{
+                @include menu-nawigacyjne;
+            }
+            
+        }
+    }
+   
+}
+
